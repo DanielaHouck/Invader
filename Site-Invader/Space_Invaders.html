@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SPACE INVADERS</title>
+<link href="estilo/estilo_Space_Invaders.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="Imagens/logo.png" type="image/x-icon\" />
+</head>
+<body>
+
+<!-- Inicio do menu !-->
+<script>
+	var x = 0;
+  function myFunction(x) {
+      x.classList.toggle("change");
+  }
+  function menu()
+  {
+	x++;
+		if(x > 1){
+			x=0;
+		}
+	switch (x){
+		case 0:
+		document.getElementById('sub-active').id = 'sub'
+		break;
+		case 1:
+		document.getElementById('sub').id = 'sub-active'
+		break;
+	}
+  }
+ 
+</script>
+
+
+
+<nav>
+<input type="checkbox" id="chec">
+<label for="chec" style="z-index:10000;" onclick="">
+    
+	<div class="containermenu" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div> 
+	
+</label>
+
+<nav id="principal">
+  <ul>
+      <li><a class="menuc" href="Home.html">Home</a></li>
+      <li onclick="menu()">
+          <a class="menuc"  href="#"> + Invader</a>
+              <ul id="sub" >
+                  <li ><a class="menuc"  href="Sobre_o_artista.html">Sobre</a></li>
+                  <li ><a class="menuc"  href="Biografia.html">Biografia</a></li>
+              </ul>      
+      </li>
+      <li><a class="menuc"  href="Galeria.html">Galeria</a></li>
+      <li><a class="menuc"  href="Space_Invaders.html">Space Invaders</a></li>
+      <li><a class="menuc"  href="Formulário.html">Formulário</a></li>
+ </ul>
+</nav>
+ </nav>
+<!--Fim do menu !--> 
+
+<img class="ass"  src="Imagens/ass.png" />
+<h1> Space Invaders </h1>
+<!-- Inicio caixas !--> 
+
+<div class="caixa1">
+	<div class="flip-box">
+		<div class="flip-box-inner">
+			<div class="flip-box-front1">	
+			   <img src="Imagens/img1.fw.png" width="60%" style="position: relative; top: 25%;"/>
+			</div>
+	
+			<div class="flip-box-back">
+				<h2 class="Titulo">?</h2>
+                <p class="texto1"> Space Invaders é um jogo de videogame japonês arcade lançado originalmente em 1978 por Taito. Ele foi um dos primeiros jogos de tiro com gráfico bidimensional.</p>
+		
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="caixa2">
+	<div class="flip-box">
+		<div class="flip-box-inner">
+			<div class="flip-box-front2">	
+				<img src="Imagens/img2.fw.png" width="55%" style="position: relative; top: 25%;"/>
+			</div>
+	
+		  <div class="flip-box-back">
+		    <h2 class="Titulo">?</h2>
+			<p class="texto2">
+			O objetivo de Space Invaders é destruir ondas de naves com um canhão à laser, evitando que os aliens atinjam a parte inferior da tela, para ganhar o maior número de pontos possíveis. </p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="caixa3">
+	<div class="flip-box">
+		<div class="flip-box-inner">
+			<div class="flip-box-front3">	
+				<img src="Imagens/img3.fw.png" width="70%" style="position: relative; top: 25%;" />
+			</div>
+	
+			<div class="flip-box-back">
+				<h2 class="Titulo">?</h2>
+				<p class="texto3">Cada alien possui pontos diferentes: os da 1º e 2º fileiras, 10 pontos, os da 3º e 4º fileiras, 20 pontos, os da 5º, 40 pontos, e as naves vermelhas que passam possuem pontos aleatórios.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+ 
+ 
+ <div class="caixa4">
+	<div class="flip-box">
+		<div class="flip-box-inner">
+			<div class="flip-box-front4">	
+				<img src="Imagens/img4.fw.png" width="60%" style="position: relative; top: 25%;"/>
+			</div>
+	
+			<div class="flip-box-back">
+				<h2 class="Titulo">?</h2>
+				<p class="texto4"> Com as teclas direcionais, você movimenta seu canhão para direita e esquerda e com a barra de espaço, você atira.
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="caixa5">
+	<div class="flip-box">
+		<div class="flip-box-inner">
+			<div class="flip-box-front6">	
+				<img src="Imagens/img5.fw.png" width="70%" style="position: relative; top: 25%;"/>
+			</div>
+	
+			<div class="flip-box-back">
+				<h2 class="Titulo">?</h2>
+				<p class="texto5"> Ao acertar e destruir um número grande aliens os restantes começam a marchar mais rapidamente em direção ao jogador. Assim que todos forem eliminados uma nova formação é montada, agora iniciando uma linha abaixo da  anterior. </p>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="caixa6">
+	<div class="flip-box">
+		<div class="flip-box-inner">
+			<div class="flip-box-front7">	
+				<img src="Imagens/img6.fw.png" width="55%" style="position: relative; top: 25%;"/>
+			</div>
+	
+			<div class="flip-box-back">
+			<h2 class="Titulo">?</h2>
+			<p class="texto6"> Foi inspirado por outras mídias como Breakout, A Guerra dos Mundos e Guerra nas Estrelas. Space Invaders, ao lado de Pac-Man e Pong, é um dos jogos que ajudou a popularizar os videogames no mundo. </p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="caixa7">
+	<div class="flip-box">
+		<div class="flip-box-inner">
+			<div class="flip-box-front9">	
+				<img src="Imagens/img7.fw.png" width="60%" style="position: relative; top: 25%;" />
+			</div>
+	
+			<div class="flip-box-back">
+				<h2 class="Titulo">?</h2>
+				<p class="texto7"> Ainda que bons jogos já existissem nos fliperamas antes de Space Invaders nascer, o game de Tomohiro não respeitou os veteranos, sendo o primeiro jogo da história a migrar do fliperama para um console caseiro.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="caixa8">
+	<div class="flip-box">
+		<div class="flip-box-inner">
+			<div class="flip-box-front8">	
+				<img src="Imagens/img8.fw.png" width="55%" style="position: relative; top: 25%;"/>
+			</div>
+	
+			<div class="flip-box-back">	
+			<h2 class="Titulo2">Nishikado</h2>
+			<p class="texto8"> Engenheiro nascido em Kishiwada em 31 de março de 1944 e formado pela Universidade de Tóquio Denki. Nascido na época da 2ª Guerra Mundial, o pequeno Tomohiro mal sabia que criaria um game de guerra, mas de aliens x humanos.</p>
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="caixa9">
+	<div class="flip-box">
+		<div class="flip-box-inner">
+			<div class="flip-box-front5">	
+				<img src="Imagens/img9.fw.png" width="58%" style="position: relative; top: 25%;"/>
+			</div>
+	
+			<div class="flip-box-back">
+				<h2 class="Titulo2"> Invader</h2>
+				<p class="texto9">Escolhi os Space Invaders como uma figura central para o meu projeto porque "eles são os ícones perfeitos do nosso tempo, um tempo em que as tecnologias digitais são o batimento cardíaco do nosso mundo.” - INVADER</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+	
+	<a href="jogo.html"><img class="botao" src="Imagens/botao.fw.png"/></a>
+	
+	<img class="mario" src="Imagens/mario.fw.png"/>
+	<img class="passaro" src="Imagens/passaro.fw.png" />
+		
+
+
+<div class="rodape" ><img src="imagens/rodape.fw.png"/></div> 
+<script>
+
+function typeWriter(elemento) {
+
+	const textoArray = elemento.innerHTML.split('');
+	elemento.innerHTML = '';
+	textoArray.forEach((letra, i) => {
+	setTimeout(() => elemento.innerHTML += letra, 90 * i);
+									 });
+							}
+
+const titulo = document.querySelector('h1');
+typeWriter(titulo);
+
+typeWriter(document.querySelector('.texto1'));
+typeWriter(document.querySelector('.texto2'));
+typeWriter(document.querySelector('.texto3'));
+typeWriter(document.querySelector('.texto4'));
+typeWriter(document.querySelector('.texto5'));
+typeWriter(document.querySelector('.texto6'));
+typeWriter(document.querySelector('.texto7'));
+typeWriter(document.querySelector('.texto8'));
+typeWriter(document.querySelector('.texto9'));
+
+
+
+
+</script>
+</body>
+</html>

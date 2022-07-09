@@ -1,0 +1,94 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Formulário</title>
+<link href="estilo/estilo_form.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="Imagens/logo.png" type="image/x-icon\" />
+</head>
+<body>
+
+<!-- Inicio do menu !-->
+<script>
+	var x = 0;
+  function myFunction(x) {
+      x.classList.toggle("change");
+  }
+  function menu()
+  {
+	x++;
+		if(x > 1){
+			x=0;
+		}
+	switch (x){
+		case 0:
+		document.getElementById('sub-active').id = 'sub'
+		break;
+		case 1:
+		document.getElementById('sub').id = 'sub-active'
+		break;
+	}
+  }
+</script>
+<nav>
+<input type="checkbox" id="chec">
+<label for="chec" style="z-index:10000;" onclick="">
+
+  <div class="containermenu" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+  
+</label>
+
+<nav id="principal">
+  <ul>
+      <li><a class="menuc" href="Home.html">Home</a></li>
+      <li onclick="menu()">
+          <a class="menuc"  href="#"> + Invader</a>
+              <ul id="sub" >
+                  <li><a class="menuc"  href="Sobre_o_artista.html">Sobre o artista</a></li>
+                  <li><a class="menuc"  href="Biografia.html">Biografia</a></li>
+              </ul>      
+      </li>
+      <li><a class="menuc"  href="Galeria.html">Galeria</a></li>
+      <li><a class="menuc"  href="Space_Invaders.html">Space Invaders</a></li>
+      <li><a class="menuc"  href="Formulário.html">Formulário</a></li>
+ </ul>
+ </nav>
+ </nav>
+ 
+<!--Fim do menu !--> 
+	<center>
+		<form class="form" action="upload.php" method="post" enctype="multipart/form-data" >
+				
+			<img class="horizontal1" src="Imagens/horizontal.fw.png" />	
+			<img class="horizontal2" src="Imagens/horizontal2.fw.png" />	
+
+			<br>
+			<p><b class="Titulo_Form">Spot and flash the street mosaics of Invader.</b></p>
+			<br>
+			<p class="campo">* Player name: &ensp;<input type="text" name="nome" required placeholder="Nome completo"></p>
+			<br>
+			<p class="campo">* E-mail: &ensp;<input type="email" name="email" required placeholder="E-mail para contato"></p>
+			<br>
+			<!-- <p class="campo">Assunto da mensagem:  <input type="text" name="Assunto" placeholder="Assunto"></p> <br>
+			<p class="campo">* Mensagem:</p> <p><textarea name="mensagem" cols="30" rows="10" required placeholder="Sua mensagem"></textarea></p><br>!-->
+			<p class="campo">
+				<p>* Voçê já viu alguma obra do Invader pessoalmente?</p><br>
+				<span class="radio">
+				<p><input name="relato" type="radio" value="sim" required /> <span class="parform">Sim</span>
+				<input name="relato" type="radio" value="nao"  required /> <span class="parform">Não</span>
+				</p></span>
+			</p>
+			<br>
+			<p> * Selecione uma imagem para fazer upload: <br><br>
+				<input type="file" name="arquivoParaUpload" id="arquivoParaUpload" required ><br><br>
+			</p>
+					<input class="btn" type="submit" value="Enviar" name="uploadImagem">
+		</form>
+	</center>
+	
+	
+</body>
+</html>

@@ -1,0 +1,430 @@
+﻿/* Formatação padrão */
+
+@charset "utf-8";
+
+@font-face {
+  font-family: 'adore64';
+  src: url('../Fontes/adore64.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Machine Regular';
+  src: url('../Fontes/Machine Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+	
+}
+
+body {
+  background-color: #00002D;
+    font-family: "Agency FB", Arial, SansSerif;
+    font-size: 1.4em;
+ }
+ 
+
+
+a {
+    text-decoration: none;	
+}
+
+/* Inicio do css icone do menu hamburguer */
+
+.containermenu {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #33ff00;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+	background-color: #33ff00;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+	background-color: #33ff00;
+}
+
+	/* Fim do css do icone do menu hamburguer */
+
+	/* Inicio Menu hamburguer */
+
+#chec {
+    display: none;
+    	/* esconde o checkbox */
+}
+
+#chec:checked ~ #principal {
+    transform: translateX(100%);
+    	/* Faz o menu aparecer e reaparecer */
+}
+
+#chec:checked ~ .bg {
+    display: block;
+}
+
+#chec:checked ~ #all {
+    z-index: 500;
+
+	
+}
+
+#principal {
+	
+    background-color: #222222;
+   	 /* cor do fundo do menu */
+    width: 100%;
+    height: 100vh;
+   	 /* unidade base do viewport, pega 100% da pagina */
+    left: -100%;
+    position: relative;
+	text-align:center;
+    transition: all .4s;
+	/* Faz a transição/animação do menu */
+	z-index: 100;
+    
+}
+
+.menuc {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+    font-size: 4.2vh;
+}
+
+.menuc:hover {
+    /* hover do menu */
+    color: #33ff00;
+    
+}
+
+label {
+    padding: 1px;
+    margin: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+ul {
+    top: 115px;
+    position: absolute;
+    width: 100%;
+	list-style: none;
+}
+
+ul li span {
+    float: right;
+}
+
+#sub {
+	position:static;
+	/*display: none;*/
+	visibility:hidden;
+	height:0;
+	display: none;
+		
+}
+
+#sub-active {
+	position:static;
+	background-color: #2B2B2B;
+	/*cor do submenu*/
+	visibility:visible;
+}
+
+
+
+#all{
+	position: sticky;
+    top:0;
+    z-index:0;
+}
+
+
+#sub10 #obras {
+    top: -70px;
+    position: relative;
+	visibility: hidden;
+    width: 170px;
+    pointer-events: none;
+}
+
+#sub10:hover #obras {
+    left: 40%;
+    pointer-events: initial;
+}
+
+#sub10 {
+     overflow: hidden;
+    height: 66px;
+}
+
+
+/* Fim Menu hamburguer */
+
+
+.fundo{
+
+background-image: url(../Imagens/inv.jpg);
+background-repeat: no-repeat;
+margin: 0;
+
+}
+.fundo img{
+	
+	width: 100%;
+	
+}
+		
+.rodape{
+	
+	margin-top: 80px;
+	left: 0;
+	padding: 0;
+	width: 100%;
+	border: 2px solid #000;
+	z-index: 300;
+}
+.rodape img {
+		
+	width: 100%;
+	}
+	
+	
+@media screen and (min-width: 950px){
+	
+p{	
+	color: #FFF;
+	text-shadow: 2px 3px 0 black;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+}
+
+h1{
+	font-family: 'Machine Regular', 'Agency FB';
+	color: #33ff00;
+	font-size:2.3vw;
+	text-align: center;
+	letter-spacing: 3px;
+	text-shadow: 4px 4px 0 black;	
+}
+	
+.Coluna1{
+	-moz-column-count: 2;
+	-moz-column-gap: 0px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 0px;
+	column-count: 2;
+	column-gap: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;	
+}
+
+.Coluna2{
+	-moz-column-count: 2;
+	-moz-column-gap: 10px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 10px;
+	column-count: 2;
+	column-gap: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	
+}
+.Coluna3{
+	-moz-column-count: 2;
+	-moz-column-gap: 0px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 0px;
+	column-count: 2;
+	column-gap: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;	
+}
+
+.Bloco1{
+	
+	margin-top: 210px;	
+}
+
+.Bloco2, .Bloco3{
+		
+	margin-top: 60px;		
+}
+
+.text1,.text3{
+	
+	text-align: left;	
+}
+
+.text2{
+	
+	text-align: right;	
+}
+
+.text2{
+	
+	text-align: right;	
+}
+
+}	
+
+@media screen and (min-width: 700px) and (max-width: 950px){ 
+
+p{
+	
+	color: #FFF;
+	text-shadow: 2px 3px 0 black;
+	font-size: 1em;
+	letter-spacing: 1px;
+}
+
+h1{
+	font-family: 'Machine Regular', 'Agency FB';
+	color: #33ff00;
+	font-size:1.1em;
+	text-align: center;
+	letter-spacing: 3px;
+	text-shadow: 4px 4px 0 black;	
+}
+	
+.Coluna1{
+	-moz-column-count: 2;
+	-moz-column-gap: 0px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 0px;
+	column-count: 2;
+	column-gap: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	
+}
+
+.Coluna2{
+	-moz-column-count: 2;
+	-moz-column-gap: 10px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 10px;
+	column-count: 2;
+	column-gap: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	
+}
+.Coluna3{
+	-moz-column-count: 2;
+	-moz-column-gap: 0px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 0px;
+	column-count: 2;
+	column-gap: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	
+}
+
+.Bloco1{
+	
+	margin-top: -110px;
+	
+}
+.Bloco2, .Bloco3{
+		
+	margin-top: 60px;		
+}
+
+
+.text2{
+	
+	text-align: right;	
+}
+
+.text1,.text3{
+	
+	text-align: left;	
+}
+
+
+
+}
+
+@media screen and (max-width: 700px) {
+	
+p{
+	
+	color: white;
+	text-shadow: 2px 3px 0 black;
+	font-size: 1em;
+	letter-spacing: 1px;
+}
+
+h1{
+	font-family: 'Machine Regular', 'Agency FB';
+	color: #33ff00;
+	font-size:0.7em;
+	text-align: center;
+	letter-spacing: 4px;
+	text-shadow: 4px 4px 0 black;	
+}
+	
+.Coluna1, .Coluna2, .Coluna3{
+	-moz-column-count: 1;
+	-moz-column-gap: 0px;
+	-webkit-column-count: 1;
+	-webkit-column-gap: 0px;
+	column-count: 1;
+	column-gap: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	
+}
+
+
+.Bloco1{
+	
+	margin-top: -300px;
+	
+}
+.Bloco2, .Bloco3{
+		
+	margin-top: 60px;		
+}
+
+
+.text1, .text2, .text3{
+	
+	text-align: center;	
+}
+	
+}
+	

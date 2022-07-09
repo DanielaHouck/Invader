@@ -1,0 +1,840 @@
+﻿/* formatação geral */
+
+BODY{
+background-image: url(../Imagens/fundo33.jpg);
+
+}
+	
+@font-face {
+  font-family: 'Machine Regular';
+  src: url('../Fontes/Machine Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'adore64';
+  src: url('../Fontes/adore64.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+	font-family: "Agency FB", SansSerif;
+}
+
+a {
+    text-decoration: none;	
+}
+
+/* Slide de fotos */
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image containerfotos (needed to position the left and right arrows) */
+.containerfotos {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlidesfotos {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* nextfotos & prevfotosious buttons */
+.prevfotos,
+.nextfotos {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #33FF00;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "nextfotos button" to the right */
+.nextfotos {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prevfotos:hover,
+.nextfotos:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/10 etc) */
+.numbertextfotos {
+  color: #33FF00;
+  font-size: 13px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  text-shadow: 1px 1px 0 black;
+  font-family: 'Agency FB'
+
+}
+
+/* containerfotos for image text */
+.caption-containerfotos {
+  text-align: center;
+  background-color: #222;
+  padding: 8px 16px;
+  color:#33FF00;
+  text-shadow: 1px 1px 0 black;
+  font-family: 'Agency FB';
+    font-size: 15px;;
+ 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 10%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+header{
+width: 50%;
+margin-left:auto;
+margin-right:auto;
+
+}
+
+
+/* Slide de vídeos */
+
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+  margin-top: 5%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #33ff00;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 0 12px;
+  /* position: absolute; */
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #33FF00;
+  font-size: 13px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  text-shadow: 1px 1px 0 black;
+  font-family: 'Agency FB'
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+  
+}
+
+/* Inicio do css icone do menu hamburguer */
+
+.containermenu {
+    display: inline-block;
+    cursor: pointer;
+	
+} 
+
+.bar1,
+.bar2,
+.bar3 {
+	
+    width: 35px;
+    height: 5px;
+    background-color: #33ff00;
+    margin: 6px 0;
+    transition: 0.4s;
+	
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+	background-color: #33ff00;
+	
+}
+
+.change .bar2 {
+    opacity: 0;
+	
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+	background-color: #33ff00;
+
+}
+
+	/* Fim do css do icone do menu hamburguer */
+
+	/* Inicio Menu hamburguer */
+
+	
+#chec {
+    display: none;
+
+    	/* esconde o checkbox */
+}
+
+#chec:checked ~ #principal {
+    transform: translateX(100%);
+    	/* Faz o menu aparecer e reaparecer */
+			
+}
+
+#chec:checked ~ .bg {
+    display: block;
+	
+}
+
+#chec:checked ~ #all {
+    z-index: 500;
+	
+}
+
+#principal {
+	
+    background-color: #222222;
+   	 /* cor do fundo do menu */
+    width: 100%;
+    height: 100vh;
+   	 /* unidade base do viewport, pega 100% da pagina */
+    left:-100%;
+    position: relative;
+	text-align:center;
+    transition: all .4s;
+	/* Faz a transição/animação do menu */
+	z-index: 100;
+	  
+}
+
+.menuc {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+    font-size: 3.9vh;
+	font-family: "Agency FB";
+	
+}
+
+.menuc:hover {
+    /* hover do menu */
+    color: #33ff00;
+}
+
+label {
+    padding: 1px;
+    margin: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+ul {
+    top: 115px;
+    position: absolute;
+    width: 100%;
+	list-style: none;
+}
+
+ul li span {
+    float: right;
+}
+
+#sub {
+	position:static;
+	display: none;
+	visibility:hidden;
+	height:0;
+		
+}
+
+#sub-active {
+	position:static;
+	background-color: #2B2B2B;
+	/*cor do submenu*/
+	visibility:visible;
+}
+
+
+#sub10 #obras {
+    top: -70px;
+    position: relative;
+	visibility: hidden;
+    width: 170px;
+    pointer-events: none;
+}
+
+#sub10:hover #obras {
+    left: 40%;
+    pointer-events: initial;
+}
+
+#sub10 {
+    overflow: hidden;
+    height: 66px;
+}
+
+
+/* Fim Menu hamburguer */
+
+
+@media screen and (min-width: 1100px){ 
+
+.slideshow-container {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.fotos{
+	
+	color: white;
+	text-align: center;
+	font-size: 2.5em;
+	z-index: 10;
+	top: 5%;
+	margin-bottom: 5%;
+	width: 100%;
+	font-family: "Machine Regular";
+
+}
+
+.videos{
+	text-align: center;
+	color: white;
+	margin-top: 8%;
+	font-size: 2.5em;
+	font-family:'Machine Regular';
+	z-index: 2000;
+		
+}
+.fundo{
+	 
+	 position: fixed;
+     padding: 0;
+	 top: 0;
+	 width: 100%;
+	 z-index: -2;
+	  
+	
+ }
+
+
+#myimage{
+	width: 600px;
+	height: 438px;
+	
+	
+}
+
+
+/* formatação zoom */
+
+* {box-sizing: border-box;}
+
+
+/* imagem*/
+
+.img-zoom-container {
+  position: relative;
+  margin-left: 10%;
+    margin-right: 10%;
+  margin-top: 5%;
+  
+}
+
+/* caixa de zoom*/
+
+.img-zoom-lens {
+  position: absolute;
+ border: 1px solid #00002D;
+  /*set the size of the lens:*/
+  width: 53px;
+  height: 53px;
+}
+
+/* caixa onde vemos com zoom*/
+
+.img-zoom-result {
+  border: 2px solid pink;
+  /*set the size of the result div:*/
+  width: 280px;
+  height: 280px;
+  right: -130%;
+  position: absolute;
+  top: 16%;
+
+
+}
+
+.posicao{
+	
+	position: absolute;
+	top: 15%;
+	width: 45%;
+	margin-left:  5%;
+
+	
+}
+
+.rodape{
+	margin-top: 10%;
+	width: 100%;
+	padding: 0;
+	border: 2px solid #000;
+	left: 0;
+	z-index: 300;
+}
+
+
+}
+		
+	
+@media screen and (min-width: 875px) and (max-width: 1100px){ 
+
+.videos{
+	text-align: center;
+	color: white;
+	margin-top: 10%;
+	font-size: 1.9em;
+	font-family:'Machine Regular';
+		
+}
+.fotos{
+	
+	color: white;
+	text-align: center;
+	font-size: 1.9em;
+	z-index: 10;
+	top: 5%;
+	margin-bottom: 5%;
+	width: 100%;
+	font-family: "Machine Regular";
+
+}
+
+
+.fundo{
+	 
+	 position: fixed ; 
+     padding: 0;
+	 top: 0;
+	 width: 100%;
+	 background-repeat: repeat;
+	 z-index: -2;
+	  
+	
+ }
+
+ 
+.rodape{
+	
+	margin-top: 10%;
+	width: 100%;
+	padding: 0;
+	border: 2px solid #000;
+	left: 0;
+}
+
+#myimage{
+	width: 486px;
+	height: 354.6px;
+	
+	
+}
+
+
+/* formatação zoom */
+
+* {box-sizing: border-box;}
+
+
+/* imagem*/
+
+.img-zoom-container {
+  position: relative;
+  margin-left: 10%;
+    margin-right: 10%;
+  margin-top: 5%;
+  
+}
+
+/* caixa de zoom*/
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #00002D;
+  /*set the size of the lens:*/
+  width: 43.2px;
+  height: 43.2px;file:///E:/DANI/USBWebserver%20v8.6/root/Invader/Imagens/fundo.jpg
+}
+
+/* caixa onde vemos com zoom*/
+
+.img-zoom-result {
+  border: 2px solid pink;
+  /*set the size of the result div:*/
+  width: 225px;
+  height: 225px;
+  right: -130%;
+  position: absolute;
+  top: 16%;
+
+
+}
+
+.posicao{
+	
+	position: absolute;
+	top: 20%;
+	width: 45%;
+	margin-left:  5%;
+
+	
+}
+
+
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 875px){ 
+
+.videos{
+	text-align: center;
+	color: white;
+	margin-top: 10%;
+	font-size: 1.7em;
+	font-family:'Machine Regular';
+		
+}
+
+.fotos{
+	
+	color: white;
+	text-align: center;
+	font-size: 1.7em;
+	z-index: 10;
+	top: 6%;
+	margin-bottom: 5%;
+	width: 100%;
+	font-family: "Machine Regular";
+
+}
+
+.fundo{
+	 
+	 position: fixed;
+     padding: 0;
+	 top: 0;
+	 width: 100%;
+	 background-repeat: repeat;
+	 z-index: -2;
+	  
+	
+ }
+
+
+#myimage{
+	width: 405px;
+	height: 295.5px;
+	
+	
+}
+
+
+/* formatação zoom */
+
+* {box-sizing: border-box;}
+
+
+/* imagem*/
+
+.img-zoom-container {
+  position: relative;
+  margin-left: 8%;
+    margin-right: 10%;
+  margin-top: 5%;
+  
+}
+
+/* caixa de zoom*/
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #00002D;
+  /*set the size of the lens:*/
+  width: 36px;
+  height: 36px;
+}
+
+/* caixa onde vemos com zoom*/
+
+.img-zoom-result {
+  border: 2px solid pink;
+  /*set the size of the result div:*/
+  width: 160px;
+  height: 160px;
+  right: -125%;
+  position: absolute;
+  top: 30%;
+
+
+
+}
+
+.posicao{
+	
+	position: absolute;
+	top: 20%;
+	width: 45%;
+	margin-left:  5%;
+
+	
+}
+.rodape{
+
+	width: 100%;
+	padding: 0;
+	margin-top: 10%;
+	border: 2px solid #000;
+	left: 0;
+}
+
+}
+
+
+@media screen and (max-width: 700px){
+	
+	.videos{
+	text-align: center;
+	color: white;
+	margin-top: 10%;
+	font-size: 1.5em;
+	font-family:'Machine Regular';
+	z-index: 100;
+		
+}
+.fotos{
+	
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
+	z-index: 10;
+	margin-top: 15%;
+	margin-bottom: 10%;
+	width: 100%;
+	font-family: "Machine Regular";
+
+}
+
+header{
+width: 82%;
+margin-left:auto;
+margin-right:auto;
+
+}
+	
+	.fundo{
+	 
+	 position: fixed;
+     padding: 0;
+	 top: 0;
+	 width: 100%;
+	 background-repeat: repeat;
+	 z-index: -2;
+	  
+	
+ }
+
+ 
+	#myimage{
+	width: 364.5px;
+	height: 265.95px;
+	
+	
+}
+
+
+/* formatação zoom */
+
+* {box-sizing: border-box;}
+
+
+/* imagem*/
+
+.img-zoom-container {
+  position: absolute;
+
+}
+
+/* caixa de zoom*/
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #00002D;
+  /*set the size of the lens:*/
+  width: 33px;
+  height: 33px;
+}
+
+/* caixa onde vemos com zoom*/
+
+.img-zoom-result {
+  border: 2px solid pink;
+  /*set the size of the result div:*/
+  left: 28%;
+  position: absolute; 
+  top: 110%;
+  text-align: center;
+  width: 160px;
+  height: 160px;
+
+
+
+}
+
+.posicao{
+	
+	position: absolute;
+	top: 5%;
+	width: 366px;
+	height: 453px;
+	left:50%;
+	transform:translate(-50%,15%);
+	
+	
+	
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 82%;
+  position: relative;
+  margin: auto;
+  margin-top: 5%;
+}
+	
+	.rodape{
+	margin-top: 10%;
+	width: 100%;
+	padding: 0;
+	border: 2px solid #000;
+	left: 0;
+}
+
+	
+}
+

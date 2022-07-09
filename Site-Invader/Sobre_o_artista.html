@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invader</title>
+<link href="estilo/estilo_sobre.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="Imagens/logo.png" type="image/x-icon\" />
+</head>
+<body>
+<!-- <div class='fundo'><div> !-->
+<img class="fundo"  src="Imagens/fotofundo.png" style='width: 100%; margin: 0; position: absolute;'/>
+<!-- Inicio do menu !-->
+<script>
+	var x = 0;
+  function myFunction(x) {
+      x.classList.toggle("change");
+  }
+  function menu()
+  {
+	x++;
+		if(x > 1){
+			x=0;
+		}
+	switch (x){
+		case 0:
+		document.getElementById('sub-active').id = 'sub'
+		break;
+		case 1:
+		document.getElementById('sub').id = 'sub-active'
+		break;
+	}
+  }
+</script>
+<nav>
+<input type="checkbox" id="chec">
+<label for="chec" style="z-index:10000;" onclick="">
+
+  <div class="containermenu" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+  
+</label>
+
+<nav id="principal">
+  <ul>
+      <li><a class="menuc" href="Home.html">Home</a></li>
+      <li onclick="menu()">
+          <a class="menuc"  href="#"> + Invader</a>
+              <ul id="sub" >
+                  <li><a class="menuc"  href="Sobre_o_artista.html">Sobre o artista</a></li>
+                  <li><a class="menuc"  href="Biografia.html">Biografia</a></li>
+              </ul>      
+      </li>
+      <li><a class="menuc"  href="Galeria.html">Galeria</a></li>
+      <li><a class="menuc"  href="Space_Invaders.html">Space Invaders</a></li>
+      <li><a class="menuc"  href="Formulário.html">Formulário</a></li>
+ </ul></nav>
+ 
+ </nav>
+ 
+<!--Fim do menu !--> 
+
+<center>
+<div class="Bloco1"> 
+<br>
+		<h1 class="titulo1">Quem é você Invasor? De onde você vem?</h1><br><br>
+	<div class="Coluna1">
+		<img class="foto1"  src="Imagens/Invader1.jpg" style='height: 400px;'/>
+		<p class="text1" style=" max-width: 80%;"><br>Eu me defino como um UFA, um Artista Livre Não Identificado. Eu escolhi Invader como meu pseudônimo e sempre apareço atrás de uma máscara. 
+		Como tal, posso visitar minhas próprias exposições sem que os visitantes saibam quem eu realmente sou, mesmo estando a alguns passos deles. Desde 1998, desenvolvi um projeto em larga escala, com o nome de código:
+		Space Invaders.</p>
+	</div>
+</div>
+
+
+<div class="Bloco2"> 
+		<center><h1 class="titulo2">Sobre o que é o projeto Space Invaders?</</h1></center><br><br>
+	<div class="Coluna2">
+		<br><p class="text2" style=" max-width: 80%;">É antes de tudo libertar a arte de seus alienadores habituais que museus ou instituições podem ser. Mas também se trata de libertar os Space Invaders de suas telas de videogame e trazê-los para o nosso mundo físico. <br> Tudo começou no dia em que decidi dar uma aparência material à pixelização através de azulejos. Cada uma dessas peças únicas se torna o fragmento de uma instalação tentacular. Espero que este projeto deixe uma impressão não apenas nas ruas, mas também nas mentes.</p>
+		<br><img class="foto2"  src="Imagens/Invader2.jpg" style='height: 400px;'/>
+	</div>
+</div>
+
+
+<div class="Bloco3"> 
+		<h1 class="titulo1">Qual é a sua estratégia de invasão? <br>Quais são as regras do jogo?</h1><br><br>
+	<div class="Coluna3">
+		<img class="foto3"  src="Imagens/Invader3.jpg"  style='height: 400px;'/>
+		<p class="text3" style=" max-width: 90%;"><br>Pouco a pouco, organizei um processo detalhado, pelo qual exploro áreas urbanas densamente povoadas internacionais e as “invadido”. Normalmente, tento exibir de 20 a 50 peças por cidade, o que já é uma boa pontuação. Às vezes, volto várias vezes à mesma cidade, implantando diferentes “ondas de invasão”, como gosto de chamá-las. O objetivo é aumentar minha pontuação invadindo continuamente e incansavelmente novos espaços. “Anytime, Anywhere” é a filosofia ... Eu tento evoluir e me reinventar o tempo todo, enquanto lidero um projeto de invasão estética preciso e sério.</p>
+	</div>
+</div>
+
+</center>
+
+<img class="rodape" src="imagens/rodape.fw.png" />
+
+
+</body>
+</html>

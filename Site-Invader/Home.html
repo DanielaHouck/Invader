@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Home</title>
+<link href="estilo/estilo_home.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="Imagens/logo.png" type="image/x-icon\" />
+
+</head>
+<body>
+<!-- Inicio do menu !-->
+<script>
+	var x = 0;
+  function myFunction(x) {
+      x.classList.toggle("change");
+  }
+  function menu()
+  {
+	x++;
+		if(x > 1){
+			x=0;
+		}
+	switch (x){
+		case 0:
+		document.getElementById('sub-active').id = 'sub'
+		break;
+		case 1:
+		document.getElementById('sub').id = 'sub-active'
+		break;
+	}
+  }
+</script>
+<nav id="all">
+<input type="checkbox" id="chec">
+<label for="chec">
+  <div class="container" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+</label>
+<div class="bg"></div>
+<nav id="principal">
+  <ul>
+      <li><a class="c" href="Home.html">Home</a></li>
+      <li onclick="menu()">
+          <a class="c"  href="#"> + Invader </a>
+              <ul id="sub" >
+                  <li ><a class="c"  href="Sobre_o_artista.html">Sobre o artista</a></li>
+                  <li ><a class="c"  href="Biografia.html">Biografia</a></li>
+              </ul>
+       
+      </li>
+      <li><a class="c"  href="Galeria.html">Galeria</a></li>
+      <li><a class="c"  href="Space_Invaders.html">Space Invaders</a></li>
+      <li><a class="c"  href="Formulário.html">Formulário</a></li>
+      
+  </ul>
+
+</nav>
+</nav>
+
+
+
+<video width=100% autoplay muted loop class="video">
+<source src="Imagens/WhatsApp.mp4" type="video/mp4">
+</video>
+
+ <!--
+<video class="video2" width=100% autoplay muted loop class="video">
+<source src="Imagens/WhatsApp.mp4" type="video/mp4">
+</video>
+!-->
+
+ <!-- Fim do menu !-->
+
+<!-- Inicio dos conteudos !-->
+
+
+
+<div class="main">
+  <a class="b" href=""></a>
+  <a class="b" href=""></a>
+  <a class="b" href=""></a>
+  <a class="b" href=""></a> 
+  <span class="text" data-text="INVADER">INVADER</span>
+
+</div>
+
+
+<img class="img1"  src="Imagens/Invader1.fw.png" />
+<img class="img2"  src="Imagens/seta.png" />
+<img class="img3"  src="Imagens/cachorro.png" />
+<img class="img4"  src="Imagens/2.png" />
+
+
+<div class="texto1">
+Invader é um Artista Livre Não Identificado que desde 1998, desenvolve um projeto em larga escala, com o nome de código: Space Invaders.
+</div>
+
+
+
+<div class="texto2">
+Conhecido por seus mosaicos de cerâmica modelados com base na arte pixelizada dos videogames de 8 bits dos anos 70 e 80, muitos dos quais retratam os alienígenas titulares do jogo de arcade Space Invaders de 1978.
+</div>
+
+
+<div class="texto3">
+Invader é um Artista Livre Não Identificado que desde 1998, desenvolve um projeto em larga escala, com o nome de código: Space Invaders.
+
+Conhecido por seus mosaicos de cerâmica modelados com base na arte pixelizada dos videogames de 8 bits dos anos 70 e 80, muitos dos quais retratam os alienígenas titulares do jogo de arcade Space Invaders de 1978.
+</div>
+
+
+<script>
+
+function typeWriter(elemento) {
+
+	const textoArray = elemento.innerHTML.split('');
+	elemento.innerHTML = '';
+	textoArray.forEach((letra, i) => {
+	
+	setTimeout(() => elemento.innerHTML += letra,1 * i);
+									 });
+							}
+
+const titulo = document.querySelector('.texto1');
+typeWriter(titulo);
+
+
+
+typeWriter(document.querySelector('.texto3'));
+
+
+
+
+</script> 
+
+<img class="rodape" src="imagens/rodape.fw.png" class="rodape"></img>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

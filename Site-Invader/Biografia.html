@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biografia</title>
+<link href="estilo/estilo_biografia.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="Imagens/logo.png" type="image/x-icon\" />
+</head>
+<body>
+
+<!-- Inicio do menu !-->
+<script>
+	var x = 0;
+  function myFunction(x) {
+      x.classList.toggle("change");
+  }
+  function menu()
+  {
+	x++;
+		if(x > 1){
+			x=0;
+		}
+	switch (x){
+		case 0:
+		document.getElementById('sub-active').id = 'sub'
+		break;
+		case 1:
+		document.getElementById('sub').id = 'sub-active'
+		break;
+	}
+  }
+</script>
+<div class="relative1">
+<nav>
+<input type="checkbox" id="chec">
+<label for="chec" style="z-index:10000;" onclick="">
+
+  <div class="containermenu" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+  
+</label>
+
+<nav id="principal">
+  <ul>
+      <li><a class="menuc" href="Home.html">Home</a></li>
+      <li onclick="menu()">
+          <a class="menuc"  href="#"> + Invader</a>
+              <ul id="sub" >
+                  <li><a class="menuc"  href="Sobre_o_artista.html">Sobre o artista</a></li>
+                  <li><a class="menuc"  href="Biografia.html">Biografia</a></li>
+              </ul>      
+      </li>
+      <li><a class="menuc"  href="Galeria.html">Galeria</a></li>
+      <li><a class="menuc"  href="Space_Invaders.html">Space Invaders</a></li>
+      <li><a class="menuc"  href="Formulário.html">Formulário</a></li>
+ </ul></nav>
+ 
+ </nav>
+ 
+<!--Fim do menu !--> 
+
+<img class="ass"  src="Imagens/ass.png" />
+
+<div class="text1">
+
+
+<p class="textao">Invader é um dos artistas vivos mais enigmáticos e radicais do nosso tempo. Desde 1998,  ele  "invadiu" cidades e pontos de referência em todo o mundo, habilmente colocando suas peças de azulejos nos locais mais onipresentes.  Ao destacar o crescente papel da tecnologia em nossa vida cotidiana, o Invader obriga as pessoas a pensar nas implicações dessa invasão digital. Da Estação Espacial Internacional ao abismo da Baía de Cancun, do letreiro de Hollywood ao museu do Louvre, do par mais legal de tênis até a mais criativa máquina de waffles, e dos mais pequenos adesivos à maior escultura de cubo de Rubik, o Invader continua deixando inesquecível marcas em todo o mundo.</p>
+
+<div class="slideshow-container" style="text-decoration:none">
+
+	<div class="mySlides fade">
+		<div class="numbertext1">1 / 2</div>
+		<a href="https://www.space-invaders.com/world/"> <img src="Imagens/mapa2.fw.png" style="width:100%;  border-spacing: 0; border: 4px ridge #ddd; border-collapse: collapse;"/></a>
+	</div>
+
+	
+	
+	<div class="mySlides fade">
+		<div class="numbertext2">2 / 2</div>
+
+		<div class="fonte">
+			 <table>
+			<tr><th colspan="3">Invasões no mundo</th><tr>
+			<tr> <th><u>Continentes</u></th> <th><u>Países</u></th>  <th><u>Cidades</u></th></tr>
+			<tr><td><b>Europa</b></td><td>14</td> <td>56</td></tr>
+			<tr><td><b>América</b></td><td>3</td> <td>6</td></tr>
+			<tr><td><b>Ásia</b></td><td>9</td> <td>10</td></tr>
+			<tr><td><b>África</b></td><td>3</td> <td>4</td></tr>
+			<tr><td><b>Oceania</b></td><td>1</td> <td>2</td></tr>
+			</table>
+		</div> 
+	</div>
+
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</div>
+ 
+ <img class="seta2"  src="Imagens/seta.png" />
+ 
+ 
+</div> 
+<h1> Biografia </h1> 
+
+<!-- Inicio da linha do tempo !-->
+
+
+
+
+<div class="relative2">
+<div class="timeline">
+
+  <div class="container left">
+    <div class="content">
+      <h2>2018</h2><br>
+      <p class="textinho">- No cubo branco, Sobre a influência, Los Angeles, EUA</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2017</h2><br>
+      <p class="textinho">- Olá, meu jogo é, le Musée en Herbe, Paris, França</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2015</h2><br>
+      <p class="textinho">- Wipe Out, Fundação HOCA, PMQ, Hong Kong</p>
+	  </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2012</h2><br>
+      <p class="textinho">- Derives, Alice Gallery, Bruxelas, Bélgica </p></div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2011</h2><br>
+      <p class="textinho">- Ataque dos Waffles Espaciais, Galeria Lazarides, Londres, Reino Unido
+          <br>- 1000, La Générale e Galeria Franck Lefeuvre, Paris, França</p></div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2010</h2><br>
+      <p class="textinho">- Roma 2010 e outras curiosidades, Wunderkammern, Roma, Itália
+		<br>  - Home Sweet Home, Gallery Target, Tóquio, Japão</p></div>
+  </div>
+  
+  <div class="container left">
+    <div class="content">
+      <h2>2009</h2><br>
+      <p class="textinho">- Baixa Fidelidade, Lazarides Gallery, Londres, Reino Unido
+  <br>- TOP 10, Jonathan Levine Gallery, Nova York, EUA</p> </div>
+</div>
+
+ <div class="container right">
+    <div class="content">
+      <h2>2008</h2><br>
+      <p class="textinho">- Betonblumen - Invaded Bridge, MuseumsQuartier, Viena, Áustria</p> 
+	  </div>
+  </div>
+  
+  <div class="container left">
+    <div class="content">
+      <h2>2007</h2><br>
+      <p class="textinho">- Homens maus - Parte II e Invasão de Londres, Lazarides Gallery, Londres, Reino Unido
+		<br>- Homens maus - Parte I, Galerie Joellenbeck, Colônia, Alemanha</p> </div>
+</div>
+
+<div class="container right">
+    <div class="content">
+      <h2>2005</h2><br>
+      <p class="textinho"> - Rubikcubism, Six Space, Los Angeles, EUA
+	      - Rubik space , Galeria Patricia Dorfmann, Paris, França
+	      - Compilação, Galeria Bellecour, Lyon, França</p> </div>
+  </div>
+  
+  <div class="container left">
+    <div class="content">
+      <h2>2004</h2><br>
+      <p class="textinho">- I invade HOYWOD, Subliminal Projects, Los Angeles, USA</p> </div>
+</div>
+
+<div class="container right">
+    <div class="content">
+      <h2>2003</h2><br>
+      <p class="textinho">- O jogo não acaba, Galerie Magda Danysz, Paris, França
+      <br>- Reality Game, Citylights Gallery, Melbourne, Austrália</p> </div>
+  </div>
+
+<div class="container left">
+    <div class="content">
+      <h2>2001</h2><br>
+      <p class="textinho">- Invade Tóquio, Anda , Osaka, Tóquio, Japão</p> </div>
+</div>
+
+<div class="container right">
+    <div class="content">
+      <h2>2000</h2><br>
+      <p class="textinho">- O mesmo jogador dispara novamente, Galerie Almine Rech, Paris, França</p> </div>
+  </div>
+  
+<div class="container left">
+    <div class="content">
+      <h2>1999</h2><br>
+      <p class="textinho">- Moedas novas da inserção do jogador/ Jean Charles de Castelbajac CS, Paris, França</p>
+    </div>
+</div>
+
+</div>
+
+
+<div class="rodape" ><img src="imagens/rodape.fw.png"/></div>
+
+</div>
+</body>
+</html>

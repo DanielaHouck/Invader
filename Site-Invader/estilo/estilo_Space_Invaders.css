@@ -1,0 +1,892 @@
+
+/* formatação maquina de escrever */
+  
+ p::after {
+ content: '|';
+ margin-left: 3px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+ }
+ 
+ @keyframes pisca{
+ 
+ 0%, 100% {
+	opacity: 1;
+ }
+ 
+ 50%{
+	opacity: 0;
+ }
+}
+
+/* formatação geral */
+
+.texto4{
+	font-size:1.4em;
+	max-width: 180px;
+	margin-left: 10px;
+}
+body {
+   background-color: #00002D;
+   font-family: "Agency FB", SansSerif;
+}
+
+
+@font-face {
+  font-family: 'adore64';
+  src: url('../Fontes/adore64.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box; 
+}
+
+
+a {
+    text-decoration: none;	
+}
+
+/* Inicio do css icone do menu hamburguer */
+
+.containermenu {
+    display: inline-block;
+    cursor: pointer;
+	
+} 
+
+
+.bar1,
+.bar2,
+.bar3 {
+	
+    width: 35px;
+    height: 5px;
+    background-color: #33ff00;
+    margin: 6px 0;
+    transition: 0.4s;
+
+	
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+	background-color: #33ff00;
+
+	
+}
+
+.change .bar2 {
+    opacity: 0;
+
+	
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+	background-color: #33ff00;
+
+}
+
+	/* Fim do css do icone do menu hamburguer */
+
+	/* Inicio Menu hamburguer */
+
+	
+#chec {
+    display: none;
+
+    	/* esconde o checkbox */
+}
+
+#chec:checked ~ #principal {
+    transform: translateX(100%);
+    	/* Faz o menu aparecer e reaparecer */
+	
+		
+}
+
+#chec:checked ~ .bg {
+    display: block;
+
+	
+}
+
+#chec:checked ~ #all {
+    z-index: 500;
+
+	
+}
+
+#principal {
+	
+    background-color: #222222;
+   	 /* cor do fundo do menu */
+    width: 100%;
+    height: 100vh;
+   	 /* unidade base do viewport, pega 100% da pagina */
+    left:-100%;
+    position: relative;
+	text-align:center;
+    transition: all .4s;
+	/* Faz a transição/animação do menu */
+	z-index: 100;
+	
+
+    
+}
+
+.menuc {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+    font-size: 4.2vh;
+	
+}
+
+.menuc:hover {
+    /* hover do menu */
+    color: #33ff00;
+}
+
+label {
+    padding: 1px;
+    margin: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+ul {
+    top: 115px;
+    position: absolute;
+    width: 100%;
+	list-style: none;
+}
+
+ul li span {
+    float: right;
+}
+
+#sub {
+	position:static;
+	display: none;
+	visibility:hidden;
+	height:0;
+		
+}
+
+#sub-active {
+	position:static;
+	background-color: #2B2B2B;
+	/*cor do submenu*/
+	visibility:visible;
+}
+
+
+#sub10 #obras {
+    top: -70px;
+    position: relative;
+	visibility: hidden;
+    width: 170px;
+    pointer-events: none;
+}
+
+#sub10:hover #obras {
+    left: 40%;
+    pointer-events: initial;
+}
+
+#sub10 {
+    overflow: hidden;
+    height: 66px;
+}
+
+
+/* Fim Menu hamburguer */
+
+/* Formatação Caixas */
+
+
+.flip-box {
+  background-color: transparent;
+  width: 230px;
+  height: 330px;
+  perspective: 900px;
+  
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-front1, .flip-box-front2, .flip-box-front3, .flip-box-front4, .flip-box-front5, .flip-box-front6, .flip-box-front7, .flip-box-front8, .flip-box-front9, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front1 {
+  background-color: black;
+  color: #FFF; 
+  border: 3px solid #FFFF00;
+}
+
+.flip-box-front2 {
+  background-color: black;
+  color: #FFF; 
+  border: 3px solid #FC662B;
+}
+
+.flip-box-front3 {
+  background-color: black;
+  color: #FFF; 
+  border: 3px solid #FDB73D;
+}
+
+.flip-box-front4 {
+  background-color: black;
+  color: #FFF; 
+  border: 3px solid #FF007F;
+}
+
+.flip-box-front5 {
+  background-color: black;
+  color: #FFF; 
+  border: 3px solid white;
+}
+
+.flip-box-front6 {
+  background-color: black;
+  color: #FFF; 
+  border: 3px solid #9428FF;
+}
+
+.flip-box-front7 {
+  background-color: black;
+  color: #FFF; 
+  border: 3px solid #CCFF33;
+}
+
+.flip-box-front8 {
+  background-color: black;
+  color: #FFF; 
+  border: 3px solid #18B1F7;
+}
+
+.flip-box-front9 {
+  background-color: black;
+  color: #FFF; 
+  border: 3px solid #B0FFC7;
+}
+
+
+.flip-box-back {
+  background-color: black;
+  color: #FFF;
+  transform: rotateX(180deg);
+  border: 3px solid #33ff00;
+
+}
+
+
+@media screen and (min-width: 900px){
+	  p{
+	font-family: 'Agency FB';
+	color: white;
+	font-size:1.3em;
+	line-height: 25px;
+	max-width: 200px;
+	text-align: center;
+	position: absolute;
+	left: 5%;
+	top: 25%;  
+ }
+	
+	h2{
+    font-family: 'adore64', 'Agency FB';
+	color: yellow;
+	text-shadow: 2px 2px 0 red;
+	font-size:1.2em;
+}
+
+h1{
+	
+	text-align: center;
+    font-family: 'adore64', 'Agency FB';
+	color: yellow;
+	text-shadow: 2px 2px 0 red;
+	font-size:1.4em;
+	margin-top: -580px;
+
+ }	
+
+ .Titulo{
+	position: relative;
+	top: 10%;
+	font-size: 1.6em;
+} 
+
+.Titulo2{
+	position: relative;
+	top: 10%;
+	font-size: 1.3em;
+}
+	.ass{
+	  position: absolute;
+	  width: 15%;
+	  top:2%;
+	  left: 42.5%;
+	  right: 42.5%;
+	  z-index:1;
+	  margin: 0;
+	  	 
+ }	
+ 
+ .botao{
+	width:10%;
+	position: absolute; 
+	bottom: -170%; 
+	left: 45%;
+
+	  
+	 
+ }
+ 
+ .mario{
+	 width: 18%;
+	 position: absolute; 
+	 bottom: -168%;
+	 left: 5%;
+ }
+ 
+ .passaro{
+	 
+	 width: 18%;
+	 position: absolute; 
+	 bottom: -167%;
+	 right: 5%;
+ }
+ 
+ 
+
+ 
+ .botao:hover {
+box-shadow:  inset 0 0 1em white, 0 0 1em red;
+border-radius: 50%;
+
+opacity: 0,5;
+ }
+
+/* Formatação Caixas */
+
+.caixa1{
+
+position: absolute;
+left: 10%;
+top: 35%;
+margin: 0;
+z-index: 1;
+
+}
+
+.caixa2{
+
+position: absolute;
+left: 40%;
+top: 35%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa3{
+
+position: absolute;
+left: 70%;
+top: 35%;
+margin: 0;
+right: 200%;
+ z-index: 1;
+
+}
+
+.caixa4{
+
+position: absolute;
+left: 10%;
+top: 105%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa5{
+
+position: absolute;
+left: 40%;
+top: 105%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa6{
+
+position: absolute;
+left: 70%;
+top: 105%;
+margin: 0;
+right: 200%;
+ z-index: 1;
+
+}
+
+.caixa7{
+
+position: absolute;
+left: 10%;
+top: 175%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa8{
+
+position: absolute;
+left: 40%;
+top: 175%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa9{
+
+position: absolute;
+left: 70%;
+top: 175%;
+margin: 0;
+right: 200%;
+z-index: 1;
+
+}
+
+
+/* Geral */	
+	
+	.rodape{
+	position: absolute;
+	bottom: -200%;
+	left: 0;
+	width: 100%;
+	padding: 0;
+	margin-top: 75%;
+	border: 2px solid #000;
+}
+
+	.rodape img {
+		
+	width: 100%;
+	
+	}
+}
+
+
+
+
+
+@media screen and (min-width: 700px) and (max-width: 900px){ 
+
+  p{
+	font-family: 'Agency FB';
+	color: white;
+	font-size:1.2em;
+	line-height: 25px;
+	max-width: 200px;
+	text-align: center;
+	position: absolute;
+	left: 5%;
+	top: 25%;  
+ }
+
+	h2{
+    font-family: 'adore64', 'Agency FB';
+	color: yellow;
+	text-shadow: 2px 2px 0 red;
+	font-size:1.2em;
+}
+
+h1{
+	
+	text-align: center;
+    font-family: 'adore64', 'Agency FB';
+	color: yellow;
+	text-shadow: 2px 2px 0 red;
+	font-size:1.4em;
+	margin-top: -580px;
+
+ }	
+ 
+
+
+.Titulo{
+	position: relative;
+	top: 10%;
+	font-size: 1.6em;
+}
+
+.Titulo2{
+	position: relative;
+	top: 10%;
+	font-size: 1.3em;
+}
+
+
+
+	
+	.ass{
+	  position: absolute;
+	  width: 20%;
+	  top:4%;
+	  left: 40%;
+	  right: 40%;
+	  z-index:1;
+	  margin: 0;
+	  	 
+ }	
+ 
+
+ 
+ .mario{
+	 width: 18%;
+	 position: absolute; 
+	 bottom: -280%;
+	 left: 10%;
+ }
+ 
+ .passaro{
+	 
+	 width: 18%;
+	 position: absolute; 
+	 bottom: -280%;
+	 right: 10%;
+ }
+ 
+  .botao{
+	width:10%;
+	position: absolute; 
+	bottom: -280%; 
+	left: 45%;	 
+ }
+
+ 
+ .botao:hover {
+box-shadow:  inset 0 0 1em white, 0 0 1em red;
+border-radius: 50%;
+opacity: 0,5;
+ }
+
+/* Formatação Caixas */
+
+.caixa1{
+
+position: absolute;
+left: 15%;
+top: 35%;
+margin: 0;
+z-index: 1;
+
+}
+
+.caixa2{
+
+position: absolute;
+right: 15%;
+top: 35%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa3{
+
+position: absolute;
+left: 15%;
+top: 100%;
+margin: 0;
+ z-index: 1;
+
+}
+
+.caixa4{
+
+position: absolute;
+right: 15%;
+top: 100%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa5{
+
+position: absolute;
+left: 15%;
+top: 165%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa6{
+
+position: absolute;
+right: 15%;
+top: 165%;
+margin: 0;
+
+ z-index: 1;
+
+}
+
+.caixa7{
+
+position: absolute;
+left: 15%;
+top: 230%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa8{
+
+position: absolute;
+right: 15%;
+top: 230%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa9{
+
+position: absolute;
+left: 35%;
+top: 295%;
+margin: 0;
+right: 200%;
+z-index: 1;
+
+}
+
+ .rodape{
+	position: relative;
+	top: 2800px;
+	width: 100%;
+	padding: 0;
+	margin-top:6%;
+	border: 2px solid #000;
+}
+.rodape img{
+	width:100%;
+}	
+
+}
+
+
+
+@media screen and (max-width: 700px) {
+	
+	
+	
+p{
+	font-family: 'Agency FB';
+	color: white;
+	font-size:1.2em;
+	line-height: 25px;
+	max-width: 200px;
+	text-align: center;
+	position: absolute;
+	left: 5%;
+	top: 25%;  
+ }
+
+	h2{
+    font-family: 'adore64', 'Agency FB';
+	color: yellow;
+	text-shadow: 2px 2px 0 red;
+	font-size:1.2em;
+}
+
+h1{
+	
+	text-align: center;
+    font-family: 'adore64', 'Agency FB';
+	color: yellow;
+	text-shadow: 2px 2px 0 red;
+	font-size:1.3em;
+	margin-top: -580px;
+
+ }	
+
+
+.Titulo{
+	position: relative;
+	top: 10%;
+	font-size: 1.6em;
+}
+
+.Titulo2{
+	position: relative;
+	top: 10%;
+	font-size: 1.3em;
+}
+
+	.ass{
+	  position: absolute;
+	  width: 24%;
+	  top:4%;
+	  left: 38%;
+	  right: 38%;
+	  z-index:1;
+	  margin: 0;
+	  	 
+ }	
+ 
+
+ .mario{
+	 width: 25%;
+	 position: absolute; 
+	 bottom: -490%;
+	 left: 15%;
+ }
+ 
+ .passaro{
+	 
+	 width: 25%;
+	 position: absolute; 
+	 bottom: -490%;
+	 right: 15%;
+ }
+ 
+  .botao{
+visibility: hidden; 
+ }
+
+ 
+ .botao:hover {
+box-shadow:  inset 0 0 1em white, 0 0 1em red;
+border-radius: 50%;
+opacity: 0,5;
+ }
+
+/* Formatação Caixas */
+
+.caixa1{
+
+position: absolute;
+left: 25%;
+top: 35%;
+z-index: 1;
+
+}
+
+.caixa2{
+
+position: absolute;
+left: 25%;
+top: 95%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa3{
+
+position: absolute;
+left: 25%;
+top: 155%;
+margin: 0;
+ z-index: 1;
+
+}
+
+.caixa4{
+
+position: absolute;
+left: 25%;
+top: 215%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa5{
+
+position: absolute;
+left: 25%;
+top: 275%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa6{
+
+position: absolute;
+left: 25%;
+top: 335%;
+margin: 0;
+
+ z-index: 1;
+
+}
+
+.caixa7{
+
+position: absolute;
+left: 25%;
+top: 395%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa8{
+
+position: absolute;
+left: 25%;
+top: 455%;
+margin: 0;
+ z-index: 1;
+}
+
+.caixa9{
+
+position: absolute;
+left: 25%;
+top: 515%;
+margin: 0;
+z-index: 1;
+
+}
+
+ .rodape{
+	position: relative;
+	top: 3900px;
+	width: 100%;
+	padding: 0;
+	margin-top:6%;
+	border: 2px solid #000;
+}
+
+.rodape img{
+	width:100%;
+}	
+	
+	  
+}

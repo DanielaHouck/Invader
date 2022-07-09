@@ -1,0 +1,282 @@
+﻿	
+	@font-face {
+		font-family: 'adore64';
+		src: url('../Fontes/adore64.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+				}
+				
+	@font-face {
+  font-family: 'Machine Regular';
+  src: url('../Fontes/Machine Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}		
+	
+	body {
+			background-color:#000;
+			font-family: "Agency FB", SansSerif;
+			overflow-x: hidden;
+			overflow-y: hidden;
+
+		}
+				 
+		*{
+		margin: 0;
+		padding: 0;
+			
+					}
+
+		a {
+			text-decoration: none;	
+		}
+
+		h2{
+			font-family: 'adore64', 'Agency FB';
+			color: #33ff00;
+			text-shadow: 2px 2px 0 black;
+			font-size:1.3em;
+		}	
+
+			
+				
+/* Inicio do css icone do menu hamburguer */
+
+		.containermenu {
+			display: inline-block;
+			cursor: pointer;
+		}
+
+		.bar1,
+		.bar2,
+		.bar3 {
+			width: 35px;
+			height: 5px;
+			background-color: #33ff00;
+			margin: 6px 0;
+			transition: 0.4s;
+		}
+
+		.change .bar1 {
+			-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+			transform: rotate(-45deg) translate(-9px, 6px);
+			background-color: #33ff00;
+		}
+
+		.change .bar2 {
+			opacity: 0;
+		}
+
+		.change .bar3 {
+			-webkit-transform: rotate(45deg) translate(-8px, -8px);
+			transform: rotate(45deg) translate(-8px, -8px);
+			background-color: #33ff00;
+		}
+
+			/* Fim do css do icone do menu hamburguer */
+
+			/* Inicio Menu hamburguer */
+
+		#chec {
+				display: none;
+				/* esconde o checkbox */
+		}
+
+		#chec:checked ~ #principal {
+			transform: translateX(100%);
+				/* Faz o menu aparecer e reaparecer */
+		}
+
+		#chec:checked ~ .bg {
+			display: block;
+		}
+
+
+		#principal {
+			
+			background-color: #222222;
+			 /* cor do fundo do menu */
+			width: 100%;
+			height: 100vh;
+			 /* unidade base do viewport, pega 100% da pagina */
+			left: -100%;
+			position: fixed;
+			text-align:center;
+			transition: all .4s;
+			/* Faz a transição/animação do menu */
+			
+		}
+
+		.c {
+			display: block;
+			padding: 20px 5px;
+			color: white;
+			font-size: 4.2vh;
+		}
+
+		.c:hover {
+			/* hover do menu */
+			color: #33ff00;
+			
+		}
+
+		label {
+			padding: 1px;
+			margin: 14px;
+			position: absolute;
+			z-index: 1;
+		}
+
+		ul {
+			top: 115px;
+			position: absolute;
+			width: 100%;
+			list-style: none;
+		}
+
+		ul li span {
+			float: right;
+		}
+
+		#sub {
+			position:static;
+			/*display: none;*/
+			visibility:hidden;
+			height:0;
+				
+		}
+
+		#sub-active {
+			position:static;
+			background-color: #2B2B2B;
+			/*cor do submenu*/
+			visibility:visible;
+		}
+
+		.bg {
+			width: 100%;
+			height: 100vh;
+			left: 0;
+			top: 0;
+			position: fixed;
+			background-color: rgba(0, 0, 0, .5);
+			/*cor da página quando abre o menu*/	
+			display: none;
+		}
+
+		#all{
+			position: sticky;
+			top:0;
+			z-index:10;
+		}
+
+
+		#sub10 #obras {
+			top: -70px;
+			position: relative;
+			visibility: hidden;
+			width: 170px;
+			pointer-events: none;
+		}
+
+		#sub10:hover #obras {
+			left: 40%;
+			pointer-events: initial;
+		}
+
+		#sub10 {
+			overflow: hidden;
+			height: 66px;
+		}
+
+		.seta{
+		position: absolute;
+		top:90px;
+		left:54.5%;
+		}
+		
+/* Fim Menu hamburguer */
+
+@media screen and (min-width: 950px){
+
+	.jogo{
+					 
+			position:absolute;
+			top:10%;
+			left: 26%;
+					
+				}
+	.mensagem{
+	visibility: hidden;
+
+	}	
+		.aranha{
+		
+		visibility: hidden;
+	}
+	
+	.aranha2{
+		
+		visibility: hidden;
+	}
+}	
+		
+@media screen and (min-width: 750px) and (max-width: 950px){ 
+
+.jogo{
+					 
+			position:absolute;
+			top:10%;
+			left: 15%;
+					
+				}
+	.mensagem{
+	visibility: hidden;
+
+	}	
+	
+		.aranha{
+		
+		visibility: hidden;
+	}
+	
+	.aranha2{
+		
+		visibility: hidden;
+	}
+}		
+@media screen and (max-width: 750px) {
+	
+			.jogo{
+					 
+			visibility: hidden;
+			
+			width: 0;
+			height: 0;
+					
+				}
+				
+	.mensagem{
+	color: white;
+	position: absolute;
+	top: 10%;
+	margin: 5%;
+	font-family: 'Machine Regular';
+	font-size: 1.5em;
+
+	}	
+	
+	.aranha{
+		
+		margin-top: 300px;
+		width: 100px;
+		
+	}
+		.aranha2{
+		
+		margin-top: 300px;
+		width: 100px;
+		
+	}
+	
+}

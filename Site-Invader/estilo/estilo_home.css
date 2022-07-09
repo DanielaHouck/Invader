@@ -1,0 +1,1713 @@
+/* Formatação padrão */
+
+@charset "utf-8";
+
+body {
+    font-family: "Agency FB", Arial, SansSerif;
+    font-size: 1.4em;
+  	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00001e+8,111120+27,2b2b2b+42,2b2b2b+50,2b2b2b+58,111120+89,00001e+98 */
+	background: #00001e; /* Old browsers */
+	background: -moz-linear-gradient(top,  #00001e 8%, #111120 27%, #2b2b2b 42%, #2b2b2b 50%, #2b2b2b 58%, #111120 89%, #00001e 98%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #00001e 8%,#111120 27%,#2b2b2b 42%,#2b2b2b 50%,#2b2b2b 58%,#111120 89%,#00001e 98%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #00001e 8%,#111120 27%,#2b2b2b 42%,#2b2b2b 50%,#2b2b2b 58%,#111120 89%,#00001e 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00001e', endColorstr='#00001e',GradientType=0 ); /* IE6-9 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+	color: #FFF;
+}
+
+@font-face {
+  font-family: 'adore64';
+  src: url('../Fontes/adore64.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Titulo */
+
+.main .b:nth-child(1) {
+  -webkit-clip-path: polygon(0 0, 100% 0, 50% 50%);
+  clip-path: polygon(0 0, 100% 0, 50% 50%);
+}
+.main .b:nth-child(2) {
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+  clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+}
+.main .b:nth-child(3) {
+  -webkit-clip-path: polygon(0 100%, 50% 50%, 100% 100%);
+  clip-path: polygon(0 100%, 50% 50%, 100% 100%);
+}
+.main .b:nth-child(4) {
+  -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
+  clip-path: polygon(0 0, 50% 50%, 0 100%);
+}
+.main .b:hover {
+  -webkit-clip-path: none;
+  clip-path: none;
+  z-index: 2;
+}
+.main .b:nth-child(1):hover ~ .text:before {
+  --from: circle(0% at 50% 0%);
+  --to: circle(150% at 0% 50%);
+  -webkit-animation: textani 0.8s forwards;
+          animation: textani 0.8s forwards;
+}
+ 
+.main .b:nth-child(2):hover ~ .text:before {
+  --from: circle(0% at 150% 50%);
+  --to: circle(100% at 50% 50%);
+  -webkit-animation: textani 0.8s forwards;
+          animation: textani 0.8s forwards;
+}
+ 
+.main .b:nth-child(3):hover ~ .text:before {
+  --from: circle(0% at 50% 100%);
+  --to: circle(150% at 0% 50%);
+  -webkit-animation: textani 0.8s forwards;
+          animation: textani 0.8s forwards;
+}
+ 
+.main .b:nth-child(4):hover ~ .text:before {
+	--from: circle(0% at 0% 50%);
+	--to: circle(150% at 0% 50%);
+	-webkit-animation: textani 0.8s forwards;
+    animation: textani 0.8s forwards;
+}
+
+@keyframes textani {
+  0% {
+    -webkit-clip-path: var(--from);
+            clip-path: var(--from);
+  }
+  100% {
+    -webkit-clip-path: var(--to);
+            clip-path: var(--to);
+    color: var(--color-of-text);
+  }
+}
+
+ 
+@keyframes textani {
+  0% {
+    -webkit-clip-path: var(--from);
+            clip-path: var(--from);
+  }
+  100% {
+    -webkit-clip-path: var(--to);
+            clip-path: var(--to);
+    color: var(--color-of-text);
+  }
+}
+
+/* Inicio responsividade */
+
+@media screen and (min-width: 1100px){
+	
+	html, body {
+	  height: 100%;
+	  min-height: 100%;
+	  width: 100%;
+	  overflow-x:hidden;
+	  overflow-y:auto;
+}
+	
+	/* Inicio do css icone do menu hamburguer */
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #33ff00;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+	background-color: #33ff00;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+	background-color: #33ff00;
+}
+
+	/* Fim do css do icone do menu hamburguer */
+
+	/* Inicio Menu hamburguer */
+
+#chec {
+    display: none;
+    	/* esconde o checkbox */
+}
+
+#chec:checked ~ #principal {
+    transform: translateX(100%);
+    	/* Faz o menu aparecer e reaparecer */
+}
+
+#chec:checked ~ .bg {
+    display: block;
+}
+
+#principal {
+	
+    background-color: #222222;
+   	 /* cor do fundo do menu */
+    width: 100%;
+    height: 100vh;
+   	 /* unidade base do viewport, pega 100% da pagina */
+    left: -100%;
+    position: absolute;
+	text-align:center;
+    transition: all .4s;
+	/* Faz a transição/animação do menu */
+    
+}
+
+.c {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+    font-size: 4.2vh;
+}
+
+.c:hover {
+    /* hover do menu */
+    color: #33ff00;
+    
+}
+
+label {
+    padding: 1px;
+    margin: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+ul {
+    top: 105px;
+    position: absolute;
+    width: 100%
+}
+
+ul li span {
+    float: right;
+}
+
+#sub {
+	position:static;
+	/*display: none;*/
+	visibility:hidden;
+	height:0;
+		
+}
+
+#sub-active {
+	position:static;
+	background-color: #2B2B2B;
+	/*cor do submenu*/
+	visibility:visible;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+	/*cor da página quando abre o menu*/	
+    display: none;
+}
+#all{
+	position: sticky;
+    top:0;
+    z-index:10;
+}
+
+	/* Fim do Menu hamburguer */
+	
+	/* Titulo */
+	
+.main {
+
+  --color-of-text: #33ff00;
+	position: absolute;
+	top:18%;
+	margin: 10%;
+	z-index:3;
+
+	
+}
+
+.main .b {
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  z-index: 2;
+  padding:0;
+
+}
+
+.text {
+	color: transparent;
+	-webkit-text-stroke: 1px var(--color-of-text);
+	text-stroke: 1px var(--color-of-text);
+	font-size: 6.5em;
+	font-family: 'adore64';
+	text-align: center;
+
+	
+}
+.text:before {
+	content: attr(data-text);
+	position: absolute;
+
+}
+
+	/* Inicio efeito maquina de escrever */	
+	
+p, .texto1, .texto2 {
+    text-decoration: none;
+	color: #FFF;
+   font-size: 1em;
+   font-family: 'Courier New';
+}
+
+	
+	
+.texto1::after {
+ content: '|';
+ margin-left: 5px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+ color: white;
+ }
+ 
+ .texto2::after {
+ content: '|';
+ margin-left: 5px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+ color: white;
+ }
+ 
+ 
+ @keyframes pisca{
+ 
+ 0%, 100% {
+	opacity: 1;
+ }
+ 
+ 50%{
+	opacity: 0;
+ }
+}
+
+/* Fim efeito maquina de escrever */	
+
+ /*video*/
+ 
+  .video {
+  
+ position: absolute;
+ z-index:1; 
+ width: 100%;
+
+}
+
+ /*imagens*/
+ 
+ .img1 {
+	 
+	  position: absolute;
+	  top: 83%;
+	  height: 30%;
+	  left: 69%;
+	  padding: 0;
+	  z-index:2;
+ }
+
+ .img2 {
+	 
+
+	 position:absolute;
+     top:85%;
+     left:50%;
+	 right:50%;
+	 height: 5%;
+     padding: 0;
+	 z-index:2;
+ }
+ 
+ 
+  .img3 {
+	 
+	  position: absolute;
+	  top: 135%;
+	  height: 30%;
+	  left: 10%;
+
+ }
+ 
+ 
+  .img4 {
+	 
+	  position: absolute;
+	  top: 187%;
+	  height: 40%;
+	  left: 67%;
+
+ }
+ 
+ .texto1{
+ 
+ position: absolute;
+ top: 145%;
+ left:42%;
+ width:45%;
+ text-align: left;
+ }
+
+ 
+  .texto2{
+ 
+ position: absolute;
+ top: 200%;
+ left:10%;
+ width:53%;
+ text-align: right;
+ 
+ }
+ 
+ .texto3{
+ 
+	visibility: hidden;
+ 
+ }
+
+.rodape{
+	position: absolute;
+	bottom: -1200px;
+	width: 99.6%;
+	padding: 0;
+	margin:0;
+	border: 2px solid #000;
+	left: 0;
+}
+	 	 
+}
+
+
+@media screen and (min-width: 850px) and (max-width: 1100px){
+	
+	html, body {
+	  height: 100%;
+	  min-height: 100%;
+	  width: 100%;
+	  overflow-x:hidden;
+	  overflow-y:auto;
+ 
+}
+	
+	/* Inicio do css icone do menu hamburguer */
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+	background-color: #33ff00;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-9px, -8px);
+	transform: rotate(45deg) translate(-9px, -8px);
+	background-color: #33ff00;
+}
+
+	/* Fim do css do icone do menu hamburguer */
+
+	/* Inicio Menu hamburguer */
+
+#chec {
+    display: none;
+    	/* esconde o checkbox */
+}
+
+#chec:checked ~ #principal {
+    transform: translateX(100%);
+    	/* Faz o menu aparecer e reaparecer */
+}
+
+#chec:checked ~ .bg {
+    display: block;
+}
+
+#principal {
+	
+    background-color: #222222;
+   	 /* cor do fundo do menu */
+    width: 100%;
+    height: 100vh;
+   	 /* unidade base do viewport, pega 100% da pagina */
+    left: -100%;
+    position: absolute;
+	text-align:center;
+    transition: all .4s;
+	/* Faz a transição/animação do menu */   
+}
+
+.c {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+    font-size: 2vh;
+}
+
+.c:hover {
+    /* hover do menu */
+    color: #33ff00;    
+}
+
+label {
+    padding: 1px;
+    margin: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+ul {
+    top: 82px;
+    position: absolute;
+    width: 100%
+}
+
+ul li span {
+    float: right;
+}
+
+#sub {
+	position:static;
+	/*display: none;*/
+	visibility:hidden;
+	height:0;
+		
+}
+
+#sub-active {
+	position:static;
+	background-color: #2B2B2B;
+	/*cor do submenu*/
+	visibility:visible;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+	/*cor da página quando abre o menu*/	
+    display: none;
+}
+#all{
+	position: sticky;
+    top:0;
+    z-index:10;
+}
+
+/* Fim Menu hamburguer */
+
+/* Titulo */
+	
+.main {
+
+  --color-of-text: #33ff00;
+	position: absolute;
+	 top:18%;
+	bottom:20%;
+	margin: 10%;
+	z-index:3;
+	
+}
+
+.main .b {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  padding:0;
+
+}
+
+.text {
+	color: transparent;
+	-webkit-text-stroke: 1px var(--color-of-text);
+	text-stroke: 1px var(--color-of-text);
+	font-size: 5em;
+	font-family: 'adore64';
+	text-align: center;
+	
+}
+.text:before {
+	content: attr(data-text);
+	position: absolute;
+
+}
+	
+	/* Inicio efeito maquina de escrever */	
+	
+p, .texto1, .texto2 {
+    text-decoration: none;
+	color: #FFF;
+   font-size: 1em;
+   font-family: 'Courier New';
+}
+
+	
+	
+.texto1::after {
+ content: '|';
+ margin-left: 5px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+ color: white;
+ }
+ 
+ .texto2::after {
+ content: '|';
+ margin-left: 5px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+ color: white;
+ }
+ 
+ 
+ @keyframes pisca{
+ 
+ 0%, 100% {
+	opacity: 1;
+ }
+ 
+ 50%{
+	opacity: 0;
+ }
+}
+
+/* Fim efeito maquina de escrever */	
+
+ /*video*/
+ 
+  .video {
+  
+ position: absolute;
+ z-index:1; 
+ width: 100%;
+
+}
+
+ /*imagens*/
+ 
+ .img1 {
+	 
+	  position: absolute;
+	  top: 430px;
+	  height: 22%;
+	  left: 65%;
+	  padding: 0;
+	  z-index:2;
+ }
+
+ .img2 {
+	 
+
+	 position:absolute;
+     top: 410px;
+     left:50%;
+	 right:50%;
+	 height: 5%;
+     padding: 0;
+	 z-index:2;
+ }
+ 
+ 
+  .img3 {
+	 
+	  position: absolute;
+	  top: 110%;
+	  height: 25%;
+	  left: 10%;
+
+ }
+ 
+  .img4 {
+	 
+	  position: absolute;
+	  top: 160%;
+	  height: 30%;
+	  left: 67%;
+ }
+ 
+ .texto1{
+ 
+ position: absolute;
+ top: 115%;
+ left:50%;
+ width:45%;
+ text-align: left;
+ font-size: 0.8em;
+
+ }
+ 
+ 
+  .texto2{
+ 
+ position: absolute;
+ top: 170%;
+ left:8%;
+ width:53%;
+ text-align: right;
+ font-size: 0.8em;
+ 
+ }
+ 
+  .texto3{
+ 
+	visibility: hidden;
+ 
+ }
+	
+
+.rodape{
+	position: absolute;
+	bottom: -900px;
+	width: 99.6%;
+	padding: 0;
+	margin:0;
+	border: 2px solid #000;
+	left: 0;
+}
+	 
+	 
+}
+
+
+@media screen and (min-width: 650px) and (max-width: 850px){
+	
+html, body {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+ overflow-x:hidden;
+  overflow-y:auto;
+ 
+}
+	/* Inicio do css icone do menu hamburguer */
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 28px;
+    height: 4px;
+    background-color: red;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 4px);
+	transform: rotate(-45deg) translate(-9px, 4px);
+	background-color: #33ff00;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-9px, -7px);
+	transform: rotate(45deg) translate(-9px, -7px);
+	background-color: #33ff00;
+}
+
+	/* Fim do css do icone do menu hamburguer */
+
+	/* Inicio Menu hamburguer */
+
+#chec {
+    display: none;
+    	/* esconde o checkbox */
+}
+
+#chec:checked ~ #principal {
+    transform: translateX(100%);
+    	/* Faz o menu aparecer e reaparecer */
+}
+
+#chec:checked ~ .bg {
+    display: block;
+}
+
+
+#principal {
+	
+    background-color: #222222;
+   	 /* cor do fundo do menu */
+    width: 100%;
+    height: 100vh;
+   	 /* unidade base do viewport, pega 100% da pagina */
+    left: -100%;
+    position: absolute;
+	text-align:center;
+    transition: all .4s;
+	/* Faz a transição/animação do menu */
+    
+}
+
+.c {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+    font-size: 4.2vh;
+}
+
+.c:hover {
+    /* hover do menu */
+    color: #33ff00;
+    
+}
+
+label {
+    padding: 1px;
+    margin: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+ul {
+    top: 80px;
+    position: absolute;
+    width: 100%
+}
+
+ul li span {
+    float: right;
+}
+
+#sub {
+	position:static;
+	/*display: none;*/
+	visibility:hidden;
+	height:0;
+		
+}
+
+#sub-active {
+	position:static;
+	background-color: #2B2B2B;
+	/*cor do submenu*/
+	visibility:visible;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+	/*cor da página quando abre o menu*/	
+    display: none;
+}
+#all{
+	position: sticky;
+    top:0;
+    z-index:10;
+}
+
+/* Fim Menu hamburguer */
+
+/* Titulo */
+	
+.main {
+
+  --color-of-text: #33ff00;
+	position: absolute;
+	top:6%;
+	bottom:20%;
+	margin: 13%;
+	z-index:3;
+	
+}
+
+.main .b {
+  position: absolute;
+  width: 100%;
+  height: 55%;
+  z-index: 2;
+  padding:0;
+
+}
+
+.text {
+	color: transparent;
+	-webkit-text-stroke: 1px var(--color-of-text);
+	text-stroke: 1px var(--color-of-text);
+	font-size: 3.7em;
+	font-family: 'adore64';
+	text-align: center;
+
+	
+}
+.text:before {
+	content: attr(data-text);
+	position: absolute;
+
+}
+
+	
+	/* Inicio efeito maquina de escrever */	
+	
+p, .texto1, .texto2 {
+    text-decoration: none;
+	color: #FFF;
+    font-family: 'Courier New';
+}
+
+	
+	
+.texto1::after {
+ content: '|';
+ margin-left: 5px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+ color: white;
+ }
+ 
+ .texto2::after {
+ content: '|';
+ margin-left: 5px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+ color: white;
+ }
+ 
+ 
+ @keyframes pisca{
+ 
+ 0%, 100% {
+	opacity: 1;
+ }
+ 
+ 50%{
+	opacity: 0;
+ }
+}
+
+/* Fim efeito maquina de escrever */	
+
+ /*video*/
+ 
+  .video {
+  
+ position: absolute;
+ z-index:1; 
+ width: 100%;
+
+
+}
+
+ /*imagens*/
+ 
+ .img1 {
+	 
+	  position: absolute;
+	  top: 300px;
+	  height: 20%;
+	  left: 66%;
+	  padding: 0;
+	  z-index:2;
+ }
+
+ .img2 {
+	 
+
+	 position:absolute;
+     top:280px;
+     left:50%;
+	 right:50%;
+	 height: 5%;
+     padding: 0;
+	 z-index:2;
+ }
+ 
+ 
+  .img3 {
+	 
+	  position: absolute;
+	  top: 100%;
+	  width: 30%;
+	  left: 35%;
+ }
+ 
+  .img4 {
+	 
+	  position: absolute;
+	  top: 160%;
+	 width: 28%;
+	  left: 35%;
+
+ }
+ 
+	.texto1{
+ 
+	position: absolute;
+	top: 80%;
+	left: 20%;
+	width:60%;
+	text-align: justify;
+	font-size: 0.8em;
+
+ }
+ 
+ 
+	.texto2{
+ 
+	position: absolute;
+	top: 130%;
+	left: 20%;
+	width:60%;
+	text-align: justify;
+	font-size: 0.8em;
+ 
+ }
+ 
+ 
+  .texto3{
+ 
+	visibility: hidden;
+ 
+ }
+	
+
+.rodape{
+	position: absolute;
+	bottom: -880px;
+	width: 99.6%;
+	padding: 0;
+	margin:0;
+	border: 2px solid #000;
+	left: 0;
+}
+	 
+	 
+}
+
+@media screen and (min-width: 550px) and (max-width: 650px){
+
+/* Inicio do css icone do menu hamburguer */
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 28px;
+    height: 4px;
+    background-color: orange;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 4px);
+	transform: rotate(-45deg) translate(-9px, 4px);
+	background-color: #33ff00;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-9px, -7px);
+	transform: rotate(45deg) translate(-9px, -7px);
+	background-color: #33ff00;
+}
+
+	/* Fim do css do icone do menu hamburguer */
+
+	/* Inicio Menu hamburguer */
+
+#chec {
+    display: none;
+    	/* esconde o checkbox */
+}
+
+#chec:checked ~ #principal {
+    transform: translateX(100%);
+    	/* Faz o menu aparecer e reaparecer */
+}
+
+#chec:checked ~ .bg {
+    display: block;
+}
+
+
+#principal {
+	
+    background-color: #222222;
+   	 /* cor do fundo do menu */
+    width: 100%;
+    height: 100vh;
+   	 /* unidade base do viewport, pega 100% da pagina */
+    left: -100%;
+    position: absolute;
+	text-align:center;
+    transition: all .4s;
+	/* Faz a transição/animação do menu */
+    
+}
+
+.c {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+    font-size: 4.2vh;
+}
+
+.c:hover {
+    /* hover do menu */
+    color: #33ff00;
+    
+}
+
+label {
+    padding: 1px;
+    margin: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+ul {
+    top: 86px;
+    position: absolute;
+    width: 100%
+}
+
+ul li span {
+    float: right;
+}
+
+#sub {
+	position:static;
+	/*display: none;*/
+	visibility:hidden;
+	height:0;
+		
+}
+
+#sub-active {
+	position:static;
+	background-color: #2B2B2B;
+	/*cor do submenu*/
+	visibility:visible;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+	/*cor da página quando abre o menu*/	
+    display: none;
+}
+#all{
+	position: sticky;
+    top:0;
+    z-index:10;
+}
+
+/* Fim Menu hamburguer */
+
+
+
+/* Titulo */
+	
+.main {
+
+  --color-of-text: #33ff00;
+	position: absolute;
+	z-index:3;
+	top: 5%;
+	bottom:18%;
+	margin: 17%;
+	
+}
+
+.main .b {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  z-index: 2;
+  padding:0;
+
+}
+
+
+.text {
+	color: transparent;
+	-webkit-text-stroke: 1px var(--color-of-text);
+	text-stroke: 1px var(--color-of-text);
+	font-size: 2.6em;
+	font-family: 'adore64';
+	text-align: center;
+
+
+	
+}
+.text:before {
+	content: attr(data-text);
+	position: absolute;
+
+
+}
+
+	/* Inicio efeito maquina de escrever */	
+	
+p, .texto1, .texto2, .texto3 {
+    text-decoration: none;
+	color: #FFF;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+	
+	
+.texto1::after {
+ content: '|';
+ margin-left: 5px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+ color: white;
+ }
+ 
+ .texto2::after {
+ content: '|';
+ margin-left: 5px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+ color: white;
+ }
+ 
+ 
+  .texto3::after {
+ content: '|';
+ margin-left: 5px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+ color: white;
+ }
+ 
+ 
+ @keyframes pisca{
+ 
+ 0%, 100% {
+	opacity: 1;
+ }
+ 
+ 50%{
+	opacity: 0;
+ }
+}
+
+/* Fim efeito maquina de escrever */	
+
+
+
+ /*video*/
+ 
+  .video {
+	position: absolute;
+	z-index:1; 
+	width: 100%;
+  
+}
+ 
+ /*imagens*/
+ 
+ 
+ .logo{
+	 
+	 height: 15px;
+	 margin-right: 2%;
+	 margin-top: 1%;
+ }
+ 
+ .img1 {
+	 
+	  position: absolute;
+	  top: 45%;
+	  height: 16%;
+	  right: 6%;
+	  padding: 0;
+	  z-index:2;
+ }
+
+ .img2 {
+	 
+	 
+visibility: hidden;
+ }
+ 
+ 
+  .img3 {
+	 
+	  position: absolute;
+	  top: 830px;
+	  height: 20%;
+	  left: 11%;
+	 
+
+ }
+ 
+ 
+  .img4 {
+	 
+	  position: absolute;
+	  top: 810px;
+	  height: 23%;
+	  right: 11%;
+
+
+ }
+ 
+	.texto1{
+ 
+	
+	visibility: hidden;
+
+ }
+
+	.texto2{
+ 
+	visibility: hidden;
+ 
+ }
+ 
+ 
+ 	.texto3{
+ 
+	position: absolute;
+	top: 70%;
+	left: 15%;
+	width:70%;
+	text-align: justify;
+	font-size: 0.8em;
+	line-height: 25px;
+	
+ }
+ 
+ 
+.rodape{
+
+	width: 100%;
+	border: 2px solid #000;
+	z-index: 600;
+	margin-top: 700px;
+	
+}
+	 
+	 
+}
+
+
+@media screen and (max-width: 550px){ 
+
+html, body {
+  width: 100%;
+ overflow-x:hidden;
+  overflow-y:auto;
+}
+
+
+/* Inicio do css icone do menu hamburguer */
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 28px;
+    height: 4px;
+    background-color: pink;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 4px);
+	transform: rotate(-45deg) translate(-9px, 4px);
+	background-color: #33ff00;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-9px, -7px);
+	transform: rotate(45deg) translate(-9px, -7px);
+	background-color: #33ff00;
+}
+
+	/* Fim do css do icone do menu hamburguer */
+	
+	
+
+	/* Inicio Menu hamburguer */
+
+#chec {
+    display: none;
+    	/* esconde o checkbox */
+}
+
+#chec:checked ~ #principal {
+    transform: translateX(100%);
+    	/* Faz o menu aparecer e reaparecer */
+}
+
+#chec:checked ~ .bg {
+    display: block;
+}
+
+
+#principal {
+	
+    background-color: #222222;
+   	 /* cor do fundo do menu */
+    width: 100%;
+    height: 100vh;
+   	 /* unidade base do viewport, pega 100% da pagina */
+    left: -100%;
+    position: absolute;
+	text-align:center;
+    transition: all .4s;
+	/* Faz a transição/animação do menu */
+    
+}
+
+.c {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+    font-size: 4.2vh;
+}
+
+.c:hover {
+    /* hover do menu */
+    color: #33ff00;
+    
+}
+
+label {
+    padding: 1px;
+    margin: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+ul {
+    top: 86px;
+    position: absolute;
+    width: 100%
+}
+
+ul li span {
+    float: right;
+}
+
+#sub {
+	position:static;
+	/*display: none;*/
+	visibility:hidden;
+	height:0;
+		
+}
+
+#sub-active {
+	position:static;
+	background-color: #2B2B2B;
+	/*cor do submenu*/
+	visibility:visible;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+	/*cor da página quando abre o menu*/	
+    display: none;
+}
+#all{
+	position: sticky;
+    top:0;
+    z-index:10;
+}
+
+/* Fim Menu hamburguer */
+
+
+
+/* Titulo */
+	
+.main {
+
+  --color-of-text: #33ff00;
+	position: absolute;
+	top: 10%;
+	bottom:20%;
+	margin-top: 8%;
+	margin-left: 10%;
+	margin-right: 10%;
+
+	z-index:3;
+	text-align: center;
+	
+}
+
+
+
+.main .b {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  z-index: 2;
+  padding:0;
+
+}
+
+
+.text {
+	color: transparent;
+	-webkit-text-stroke: 1px var(--color-of-text);
+	text-stroke: 1px var(--color-of-text);
+	font-size: 2.3em;
+	font-family: 'adore64';
+
+
+	
+}
+.text:before {
+	content: attr(data-text);
+	position: absolute;
+
+
+}
+
+	
+	/* Inicio efeito maquina de escrever */	
+	
+p, .texto1, .texto2, .texto3 {
+    text-decoration: none;
+	color: #FFF;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+	
+	
+.texto1::after {
+ content: '|';
+ margin-left: 5px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+ color: white;
+ }
+ 
+ .texto2::after {
+ content: '|';
+ margin-left: 5px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+ color: white;
+ }
+ 
+ 
+  .texto3::after {
+ content: '|';
+ margin-left: 5px;
+ opacity: 1;
+ animation: pisca .7s infinite;
+ color: white;
+ }
+ 
+ 
+ @keyframes pisca{
+ 
+ 0%, 100% {
+	opacity: 1;
+ }
+ 
+ 50%{
+	opacity: 0;
+ }
+}
+
+/* Fim efeito maquina de escrever */	
+
+
+
+ /*video*/
+ 
+  .video {
+	position: absolute;
+	z-index:1; 
+	width: 100%;
+  
+}
+ 
+ /*imagens*/
+ 
+ 
+ .logo{
+	 
+	 height: 15px;
+	 margin-right: 2%;
+	 margin-top: 1%;
+ }
+ 
+ .img1 {
+	 
+	  position: absolute;
+	  top: 200px;
+	  height: 14%;
+	  right: 6%;
+	  padding: 0;
+	  z-index:2;
+ }
+
+ .img2 {
+	 
+	 
+visibility: hidden;
+ }
+ 
+ 
+  .img3 {
+	 
+	  position: absolute;
+	  top: 850px;
+	  height: 12%;
+	  left: 11%;
+	 
+
+ }
+ 
+ 
+  .img4 {
+	 
+	  position: absolute;
+	  top: 840px;
+	  height: 15%;
+	  right: 11%;
+
+
+ }
+ 
+	.texto1{
+ 
+	
+	visibility: hidden;
+
+ }
+
+	.texto2{
+ 
+	visibility: hidden;
+ 
+ }
+ 
+ 
+ 	.texto3{
+ 
+	position: absolute;
+	top: 365px;
+	left: 15%;
+	width:70%;
+	text-align: left;
+	font-size: 0.8em;
+	line-height: 25px;
+	
+ }
+ 
+ 
+.rodape{
+
+	width: 100%;
+	border: 1px solid #000;
+	z-index: 600;
+	margin-top: 610px;
+	
+}
+	 
+	 
+}
+

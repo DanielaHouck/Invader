@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" class="language-en" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SPACE INVADERS</title>
+<link href="estilo/estilo_jogo.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="Imagens/logo.png" type="image/x-icon\" />
+<meta name="description" content="Remember this old classic? Space Invaders is one of the most addicting games that was ever made. The idea is very simplistic. You are a space ship who must destroy the invading enemy space ships as they descend upon your little 8-bit world.  Use the [SPACE] bar to fire your gun at them and blow each ship to pieces. Be careful though, because these ships fire back and as you deplete their numbers, the space invaders get faster and faster until the last remaining ship appears to move at near warp speed. To ensure you stay alive as long as possible, hide behind the green walls and develop and a run-and-gun mentality. Try to blast out whole rows of space invaders at once as it makes it easier to shoot into a crowd rather than pinpoint each individual ship.">
+</head>	
+<body>
+
+	<!-- Inicio do menu !-->
+<script>
+	var x = 0;
+  function myFunction(x) {
+      x.classList.toggle("change");
+  }
+  function menu()
+  {
+	x++;
+		if(x > 1){
+			x=0;
+		}
+	switch (x){
+		case 0:
+		document.getElementById('sub-active').id = 'sub'
+		break;
+		case 1:
+		document.getElementById('sub').id = 'sub-active'
+		break;
+	}
+  }
+  
+  
+</script>
+
+<nav id="all">
+<input type="checkbox" id="chec">
+<label for="chec">
+  <div class="containermenu" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+</label>
+<div class="bg"></div>
+<nav id="principal">
+  <ul>
+      <li><a class="c" href="Home.html">Home</a></li>
+      <li onclick="menu()">
+          <a class="c"  href="#"> + Invader </a>
+              <ul id="sub" >
+                  <li ><a class="c"  href="Sobre_o_artista.html">Sobre o artista</a></li>
+                  <li ><a class="c"  href="Biografia.html">Biografia</a></li>
+              </ul>      
+      </li>
+      <li><a class="c"  href="Galeria.html">Galeria</a></li>
+      <li><a class="c"  href="Space_Invaders.html">Space Invaders</a></li>
+      <li><a class="c"  href="Formulário.html">Formulário</a></li>
+ </ul></nav>
+ 
+ </nav>
+ 
+ <!-- Inicio do jogo !-->
+		<div class="jogo">	
+			<center>
+				<div class="flash-game">
+					<embed width="600" height="552" src="http://www.pacxon4u.com/space-invaders/space-invaders.swf" quality="high" name="FlashContent" allowscriptaccess="never" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+				</div>
+			</center>
+		</div>
+		
+	<center>	<p class="mensagem"> O jogo foi desenvolvido exclusivamente para computadores.<br> <br>Para jogar acesse a página por um PC ou notebook. </p>
+		<img class="aranha" src="Imagens/aranha.fw.png" />
+		<img class="aranha2" src="Imagens/aranha2.fw.png" /></center>
+	</body>
+</html>

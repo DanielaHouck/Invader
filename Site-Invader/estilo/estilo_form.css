@@ -1,0 +1,335 @@
+/* formatação php */
+.stphp{
+	color:white;
+	font-size: 30px;
+
+}
+
+.obg{
+	color: pink;
+	font-size: 25px;
+	font-family: 'Machine Regular';
+}
+h1{	
+	color: white;
+}
+/* fim formatação php */
+
+
+.horizontal1{
+	
+	width: 200px;
+	position: absolute;
+	margin-top: 470px;
+	margin-left: -30px;
+	
+}
+.horizontal2{
+	
+	width: 200px;
+	position: absolute;
+	margin-top: 470px;
+	margin-left: -180px;
+	
+}
+
+body{
+background-image: url(../Imagens/fundo33.jpg);
+
+}
+
+@font-face {
+  font-family: 'Machine Regular';
+  src: url('../Fontes/Machine Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'adore64';
+  src: url('../Fontes/adore64.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+	font-family: "Agency FB", SansSerif;
+}
+
+a {
+    text-decoration: none;	
+}
+
+
+#titulo{
+	
+	font-family: 'Machine Regular';
+	font-size: 2em;
+	text-align: center;
+	color: red;
+	z-index: 500;
+	
+	
+}	
+
+/* Inicio do css icone do menu hamburguer */
+
+.containermenu {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #33ff00;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+	background-color: #33ff00;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+	background-color: #33ff00;
+}
+
+	/* Fim do css do icone do menu hamburguer */
+
+	/* Inicio Menu hamburguer */
+
+#chec {
+    display: none;
+    	/* esconde o checkbox */
+}
+
+#chec:checked ~ #principal {
+    transform: translateX(100%);
+    	/* Faz o menu aparecer e reaparecer */
+}
+
+#chec:checked ~ .bg {
+    display: block;
+}
+
+#chec:checked ~ #all {
+    z-index: 500;
+
+	
+}
+
+#principal {
+	
+    background-color: #222222;
+   	 /* cor do fundo do menu */
+    width: 100%;
+    height: 100vh;
+   	 /* unidade base do viewport, pega 100% da pagina */
+    left: -100%;
+    position: relative;
+	text-align:center;
+    transition: all .4s;
+	/* Faz a transição/animação do menu */
+	z-index: 100;
+    
+}
+
+.menuc {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+    font-size: 4.2vh;
+}
+
+.menuc:hover {
+    /* hover do menu */
+    color: #33ff00;
+    
+}
+
+label {
+    padding: 1px;
+    margin: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+ul {
+    top: 115px;
+    position: absolute;
+    width: 100%;
+	list-style: none;
+}
+
+ul li span {
+    float: right;
+}
+
+#sub {
+	position:static;
+	/*display: none;*/
+	visibility:hidden;
+	height:0;
+	display: none;
+		
+}
+
+#sub-active {
+	position:static;
+	background-color: #2B2B2B;
+	/*cor do submenu*/
+	visibility:visible;
+}
+
+#all{
+	position: sticky;
+    top:0;
+    z-index:0;
+}
+
+
+#sub10 #obras {
+    top: -70px;
+    position: relative;
+	visibility: hidden;
+    width: 170px;
+    pointer-events: none;
+}
+
+#sub10:hover #obras {
+    left: 40%;
+    pointer-events: initial;
+}
+
+#sub10 {
+    overflow: hidden;
+    height: 66px;
+}
+
+
+/* Fim Menu hamburguer */
+
+
+/* Formatação dessa página */
+
+.form{
+	width: 383px;
+	height: 490px;
+	border: #33ff00 ridge 4px;
+	position: absolute;
+	background-color: rgba(0,0,0,0.6);
+	left: 35%;
+	padding-left: 2%;
+	padding-right: 2%;	
+	top: 7%;
+	left:50%;
+	transform:translate(-50%,5%);
+	border-collapse: collapse;
+	
+}
+
+.Titulo_Form{
+	
+	color: pink;
+	font-family: 'Machine Regular';
+	font-size: 0.8em;
+	
+}
+		
+#arquivoParaUpload{
+	
+font-family: 'Machine Regular';
+			
+}
+
+
+p{
+	
+	font-size: 1.5em;
+	color: white;
+	
+}
+
+
+
+
+.btn{
+		font-family: 'Machine Regular';
+		font-size: 1.4em;
+		position:relative;
+		background-color: white;
+		color: black;
+		padding: 8px;
+		padding-right:18px;
+		padding-left:20px;
+		border: 2px ridge black;
+		transition: all .4s;
+		cursor: pointer;
+		border-collapse: collapse;
+		
+	}
+	
+.btn:hover{
+		background-color: black;
+		border-color: white;
+		color: white;
+		transition: all .4s;
+	}
+	
+
+	
+@media screen and (min-width: 850px){ 
+
+.vertical1{
+	width: 90px;
+	position: absolute;
+	margin-top: -410px;
+	left: 150px;
+	
+}
+
+.vertical2{
+	width: 90px;
+	position: absolute;
+	margin-top: -410px;
+	right: 150px;
+	
+}
+
+}
+@media screen and (min-width: 700px) and (max-width: 850px){ 
+
+.vertical1, .vertical2{
+	
+	visibility:hidden;
+	height: 0;	
+	
+}	
+
+
+}
+
+@media screen and (max-width: 700px){
+
+.vertical1, .vertical2{
+	
+	visibility:hidden;
+	height: 0;	
+	
+}		
+
+		
+}
