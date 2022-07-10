@@ -6,7 +6,9 @@ Invader é um Artista Livre Não Identificado que desde 1998, desenvolve um proj
 
 O site apresenta uma aparência imersiva no mundo dos jogos dos anos 80, trazendo diversos elementos desse cenário, como tipografias, cores, formas e imagens. 
 
-<img src="/Invader/blob/main/Site-Invader/Imagens/galeria_fotos2.fw.png"></img>
+<h1 align="center">
+<img src="Site-Invader/Imagens/galeria_fotos2.fw.png" alt="Selo Faebulare" width="150px"></img>
+</h1>
 
 * Qualquer dúvida, entre em contato: daniela_houck@hotmail.com
 
