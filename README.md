@@ -6,5 +6,7 @@ Invader é um Artista Livre Não Identificado que desde 1998, desenvolve um proj
 
 O site apresenta uma aparência imersiva no mundo dos jogos dos anos 80, trazendo diversos elementos desse cenário, como tipografias, cores, formas e imagens. 
 
+<img src="/Invader/blob/main/Site-Invader/Imagens/galeria_fotos2.fw.png"></img>
+
 * Qualquer dúvida, entre em contato: daniela_houck@hotmail.com
 
